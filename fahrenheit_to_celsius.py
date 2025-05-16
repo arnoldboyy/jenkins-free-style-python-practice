@@ -1,24 +1,24 @@
 import sys
 
 def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5.0/9.0
+    return (fahrenheit - 32) * 5.0 / 9.0
 
 if __name__ == "__main__":
+    name = "KEVIN" 
+
     if len(sys.argv) != 2:
-        print("Usage: python3 fahrenheit_to_celsius.py <temperature_in_fahrenheit>")
+        print(f"Hola {name}, debes usar el script así:")
+        print("Uso: python3 fahrenheit_to_celsius.py <temperatura_en_fahrenheit>")
         sys.exit(1)
 
-    # Convert the argument to a float
     try:
         fahrenheit = float(sys.argv[1])
     except ValueError:
-        print("Please provide a valid number for the temperature in Fahrenheit.")
+        print(f"{name}, por favor proporciona un número válido para la temperatura en Fahrenheit.")
         sys.exit(1)
 
-    # Convert to Celsius
     celsius = fahrenheit_to_celsius(fahrenheit)
-    
-    # Display the result
-    print(f"{fahrenheit} degrees Fahrenheit is {celsius:.2f} degrees Celsius.")
+
+    print(f"{name}, {fahrenheit} grados Fahrenheit equivalen a {celsius:.2f} grados Celsius.")
 
 
